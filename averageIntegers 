@@ -1,0 +1,25 @@
+function assertEqual(actual, expected, testName) {
+  if(actual === expected) {
+    console.log("passed");
+  } else {
+    console.log('FAILED [' + testName + '] Expected "' + expected + '", but got ' + actual + '"');
+  }
+}
+
+// Skeleton
+function average(numbers) {
+  return sum(numbers) / numbers.length
+}
+
+function sum(numbers) {
+  var sum = 0;
+  for(var i = 0; i < numbers.length; i++) {
+    sum += numbers[i]
+  }
+  return sum
+}
+
+//Test:
+assertEqual(sum([4, 6, 20]), 30, "returns the sum of numbers in the input Array (possitive)")
+assertEqual(average([4, 6, 20]), 10, "returns average of numbers in the input Array (possitive)")
+assertEqual(average([4, 4, -20]), -4, "returns average of numbers in the input Array (negative)")
